@@ -17,7 +17,6 @@ const sequelize = new Sequelize(database, userName, pass, {
 });
 try {
   sequelize.authenticate();
-  console.log("thanh cong");
 } catch (error) {
   console.log("that bai", error);
 }
