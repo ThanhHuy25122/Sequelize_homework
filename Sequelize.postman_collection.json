@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "6173dc9a-e9ee-4f00-8c48-a987ef188b6c",
+		"name": "Sequelize",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24894494"
+	},
+	"item": [
+		{
+			"name": "Get food",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/food/get-food",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"food",
+						"get-food"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/user/get-user/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"get-user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get restaurant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/res/get-res/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"res",
+						"get-res",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "handle like",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/like/like-res?resId=1&userId=5",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"like",
+						"like-res"
+					],
+					"query": [
+						{
+							"key": "resId",
+							"value": "1"
+						},
+						{
+							"key": "userId",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get like res and user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/like/like-res/1?userId=1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"like",
+						"like-res",
+						"1"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "handle rate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\" : 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/rate/rate-res?resId=1&userId=5",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"rate",
+						"rate-res"
+					],
+					"query": [
+						{
+							"key": "resId",
+							"value": "1"
+						},
+						{
+							"key": "userId",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get  rate res and user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/rate/rate-res/1?userId=2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"rate",
+						"rate-res",
+						"1"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"foodId\" : 2,\r\n    \"userId\" : 2, \r\n    \"amount\": 10,\r\n    \"code\": \"\",\r\n    \"arrSubId\": \"[1,2,3]\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/order/create-order",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"order",
+						"create-order"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "localhost:8080/api",
+			"type": "string"
+		}
+	]
+}
