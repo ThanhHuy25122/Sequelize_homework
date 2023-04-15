@@ -55,6 +55,7 @@ function initModels(sequelize) {
     otherKey: "res_id",
   });
   order.belongsTo(food, { as: "food", foreignKey: "food_id" });
+  // order.belongsTo(sub_food, { as: "sub_food", foreignKey: "sub_id" }); //
   food.hasMany(order, { as: "orders", foreignKey: "food_id" });
   sub_food.belongsTo(food, { as: "food", foreignKey: "food_id" });
   food.hasMany(sub_food, { as: "sub_foods", foreignKey: "food_id" });

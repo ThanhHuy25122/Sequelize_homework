@@ -18,8 +18,6 @@ const getSubFoodsBySubIds = async (arr_sub_id) => {
 };
 
 const getOrderData = async (req, res) => {
-  // const subFoods = await getSubFoodsBySubIds(arr_sub_id); //
-
   try {
     const orders = await model.order.findAll({
       include: ["user", "food"],

@@ -184,7 +184,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"foodId\" : 2,\r\n    \"userId\" : 2, \r\n    \"amount\": 10,\r\n    \"code\": \"\",\r\n    \"arrSubId\": \"[1,2,3]\"\r\n}",
+					"raw": "{\r\n    \"foodId\" : 3,\r\n    \"userId\" : 5, \r\n    \"amount\": 10,\r\n    \"code\": \"\",\r\n    \"arrSubId\": \"[1,2,3]\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -199,6 +199,36 @@
 					"path": [
 						"order",
 						"create-order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get order",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"foodId\" : 3,\r\n    \"userId\" : 5, \r\n    \"amount\": 10,\r\n    \"code\": \"\",\r\n    \"arrSubId\": \"[1,2,3]\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/order/get-order",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"order",
+						"get-order"
 					]
 				}
 			},
